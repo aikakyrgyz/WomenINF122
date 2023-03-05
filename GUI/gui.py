@@ -6,6 +6,8 @@ class GUI:
     # or we can have a draw method in each cl.ass, like tile_board
     def draw_board(self,board):
         #draws gui
+        pass
 
     def draw_tile(self, tile):
         #draws tile
+        pass
