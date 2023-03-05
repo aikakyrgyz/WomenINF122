@@ -23,4 +23,20 @@ class HorizontalFallingShape(FallingShape):
             self._instance.append(tile)
 
 
+    faller = [top_tile, center_tile, bottom_tile]
+
+    tile = faller.top.getTile()
+    tile = empty
+
+    tile = faller.middle
+    tile = faller.bottom
+
+
+    board.draw
+
+
+    faller.draw -> location
+                   r = range(1, 3)
+                    c = constant
+    faller.location (r+1)
 

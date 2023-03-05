@@ -24,6 +24,7 @@ class TilesBoard:
         self.falling_shape = None
         self.game_over = False
 
+
     # create the full board with the tiles
     def create_board(self):
         board_rows = []
@@ -69,7 +70,7 @@ class TilesBoard:
         return self.rows
 
     # check if the index is not out of boundaries
-    def is_valid_lication(self, r, c)-> bool:
+    def is_valid_location(self, r, c)-> bool:
         if r>=len(self.board) or r<0 or c>len(self.board[0]) or c<0:
             return False
         return True
@@ -118,8 +119,10 @@ class TilesBoard:
 
 
 
-
-
+    def update(self):
+        # 1. check if the falling shape will be fine falling farther
+        # 2. call fallingShape.update of its own
+        pass
 
 
 

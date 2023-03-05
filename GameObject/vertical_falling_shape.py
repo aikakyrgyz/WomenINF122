@@ -11,10 +11,27 @@ class VerticalFallingShape(FallingShape):
         self.col = c
 
     def create(self):
+        center = self.number_of_tiles/2
         for i in range(self.number_of_tiles):
             tile = self.tile_factory.create_tile(self.tile_types[i])
+            if i == center:
+                self.center = (i, self.c)
             tile.set_index(i, self.c)
             self._instance.append(tile)
+
+        #
+        # [L, R]
+        # [T]
+        #
+        # [L, R]
+        # [L]
+        #
+        #     [R]
+        #
+
+        # [1, 2, 3, 4]
+        # [1, 2]
+
 
     def isValidColumn(self):
         # if c == null then the default c will be the center

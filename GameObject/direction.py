@@ -14,7 +14,7 @@ class Direction:
     def __str__(self):
         return self.name
 
-UP = Direction(0, 1, "UP")
+# UP = Direction(0, 1, "UP")
 DOWN = Direction(0, -1, "DOWN")
 LEFT = Direction(-1, 0, "LEFT")
 RIGHT = Direction(1, 0, "RIGHT")

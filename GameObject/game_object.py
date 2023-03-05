@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-
 from GameObject.direction import Direction
 
 
@@ -14,6 +13,7 @@ class GameObject(ABC):
         self.speed = 0
         self.direction = Direction.UP
 
+
     @abstractmethod
     def update(self): ...
 
@@ -22,21 +22,22 @@ class GameObject(ABC):
 
     # can have different speeds for different directions
     # implement later if needed
-    def set_speed(self, speed):
-        self.speed = speed
-
-    def get_speed(self):
-        return self.speed
+    # def set_speed(self, speed):
+    #     self.speed = speed
+    #
+    # def get_speed(self):
+    #     return self.speed
 
     def get_direction(self):
         return self.direction
 
-    def move(self):
-        if self.speed > 0:
-            self.x += self.direction.get_dx() * self.speed
-            self.y += self.direction.get_dy() * self.speed
+    # control the speed in the loop
+    # def move(self):
+    #     if self.speed > 0:
+    #         self.x += self.direction.get_dx() * self.speed
+    #         self.y += self.direction.get_dy() * self.speed
 
-
+    
 
 
 

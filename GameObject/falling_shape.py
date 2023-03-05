@@ -12,6 +12,7 @@ class FallingShape(GameObject):
     # to do: try to validate the r, and c without passing tiles_board
     def __init__(self, number_of_tiles:int, tile_types: list[str], tile_factory:TileAbstractFactory, tiles_board: TilesBoard):
         self.status = Status["FALLING"]
+        positioon = horizontal
         self.number_of_tiles = number_of_tiles
         self.board = tiles_board
         self.tile_types = tile_types
@@ -20,12 +21,17 @@ class FallingShape(GameObject):
         self.last_tile_index_in_shape = number_of_tiles-1 # remains the same, the index in the shape itself not the board
         # Capsule, tile_types = ["YELLOW", "RED"]
         # the creation shall be in order as specified by the tile_types
+
         # faller -> |YELLOW|RED| if horizontal
+
+        # rotate -> will change the adjacent tiles
+
         # faller ->  ______
         #           |YElLOW|
         #            -------
         #           |  RED |   if vertical
         #            -------
+
         # tile_factory should contain the factories for building the yellow and red tile
         # if horizontal -> row remains unchanged, increment the column as new tiles are appended to the shape
         # if vertical   -> column remains unchanged, increment the row ...
